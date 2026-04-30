@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>必要経費管理アプリ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="loginView">
+  <h1>ログイン</h1>
+  <input type="text" id="username" placeholder="ユーザー名" />
+  <input type="password" id="password" placeholder="パスワード" />
+  <button id="loginBtn">ログイン</button>
+</div>
+
+<div id="appView" style="display:none;">
+  <h1>必要経費管理アプリ</h1>
+  <p id="userInfo"></p>
+  <button id="logoutBtn">ログアウト</button>
+
+  <section class="form-section" id="childOnly">
+    <h2>経費を登録</h2>
+    <input type="number" id="amount" placeholder="金額（円）" />
+    <input type="text" id="purpose" placeholder="用途" />
+    <input type="file" id="receipt" accept="image/*" />
+    <button id="addBtn">追加</button>
+  </section>
+
+  <h2>未払い合計：<span id="total">0</span> 円</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>日付</th>
+        <th>金額</th>
+        <th>用途</th>
+        <th>レシート</th>
+        <th>支払い済み</th>
+      </tr>
+    </thead>
+    <tbody id="list"></tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
